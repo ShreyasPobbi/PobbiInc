@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Pobbi Inc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"  />
   <!--<link rel="shortcut icon" href="../../favicon.png" />-->
 </head>
 <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
@@ -59,25 +60,92 @@
 	margin-left:1480px;
 	margin-top:-680px;
 }
+#about {
+	display: none;
+	border: solid 3px #473B46;
+	width: 850px;
+	height: 300px;
+	margin-left: 400px;
+	margin-top: 200px;
+}
 </style>
+<script>
+function stack(context) {
+  var elem = document.getElementById("hook");
+  var elem1 = document.getElementById("hook1");
+  var elem2 = document.getElementById("hook2");
+  var elem3 = document.getElementById("hook3");
+  var pos = 250;
+  var pos1 = 10;
+  var id = setInterval(frame, 0);
+  var id1 = setInterval(frame1, 40);
+  var id2 = setInterval(frame2, 40);
+  var id3 = setInterval(frame3, 40);
+  function frame() {
+    if (pos === 0) {
+      clearInterval(id);
+    } else {
+      pos--;
+      elem.style.marginTop = pos + 'px';
+    }
+    elem.style.backgroundColor = "darkgrey";
+  }
+  function frame1() {
+    if (pos1 === -20) {
+      clearInterval(id1);
+    } else {
+      pos1--;
+      elem1.style.marginTop = pos1 + 'px';
+    }
+    elem1.style.backgroundColor = "darkgrey";
+  }
+  function frame2() {
+    if (pos1 === -20) {
+      clearInterval(id2);
+    } else {
+      pos1--;
+      elem2.style.marginTop = pos1 + 'px';
+    }
+    elem2.style.backgroundColor = "darkgrey";
+  }
+  function frame3() {
+    if (pos1 === -20) {
+      clearInterval(id3);
+    } else {
+      pos1--;
+      elem3.style.marginTop = pos1 + 'px';
+    }
+    elem3.style.backgroundColor = "darkgrey";
+  }
+  if(context === 'about'){
+      var ab = document.getElementById("about");
+      ab.style.display = "block";
+  }
+}
+
+function git_navigate() {
+	window.open("https://github.com/ShreyasPobbi");
+}
+</script>
 <body style="background-color:#E18A07;">
 	<div class="triangle">
 		<div class="company">Pobbi Inc</div>
 		<div style="color:white;padding-left:30px;margin-top:-35px">-------------------------------------------------------------------</div>
 		<div class="footer">MACHINE CONTROLLED COMPANY</div>
-		<div class="options" style="margin-top:250px">Automated ML
+		<div id="hook" class="options" style="margin-top:250px;cursor: progress;" onclick="stack()">Automated ML
 			<div class="arrow"></div>
 		</div>
-		<div class="options" style="margin-top:10px">Stocker
+		<div id="hook1" class="options" style="margin-top:10px" onclick="stack()">Stocker
 			<div class="arrow"></div>
 		</div>
-		<div class="options" style="margin-top:10px">GIT Repo
+		<div id="hook2" class="options" style="margin-top:10px;cursor: copy;" onclick="git_navigate()" >GIT Repo
 			<div class="arrow"></div>
 		</div>
-		<div class="options" style="margin-top:10px">About Me
+		<div id="hook3" class="options" style="margin-top:10px;cursor: help;" onclick="stack('about')">About Me
 			<div class="arrow"></div>
 		</div>
 		<div class="binder"></div>
+		<div id="about"></div>
 	</div>
 </body>
 </html>

@@ -25,7 +25,7 @@ SECRET_KEY = 'tx7!&i8s&n3yn(&=4s&e5lq7g8=o&aiekvry_0!3z^$9+$024o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'pobbi-inc.ml', 'www.pobbi-inc.ml']
 
 
 # Application definition

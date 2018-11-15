@@ -2,7 +2,7 @@
 <head>
   <title>Pobbi Inc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"  />
-  <!--<link rel="shortcut icon" href="../../favicon.png" />-->
+  <link rel="shortcut icon" href="/static/favicon.png"/>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
 <style>
@@ -62,11 +62,16 @@
 }
 #about {
 	display: none;
-	border: solid 3px #473B46;
+	background-color: darkgrey;
 	width: 850px;
 	height: 300px;
 	margin-left: 400px;
 	margin-top: 200px;
+	font-family: 'Yatra One', cursive;v
+}
+img {
+	height: 300px;
+	margin-left: 550px;
 }
 </style>
 <script>
@@ -132,10 +137,10 @@ function git_navigate() {
 		<div class="company">Pobbi Inc</div>
 		<div style="color:white;padding-left:30px;margin-top:-35px">-------------------------------------------------------------------</div>
 		<div class="footer">MACHINE CONTROLLED COMPANY</div>
-		<div id="hook" class="options" style="margin-top:250px;cursor: progress;" onclick="stack()">Automated ML
+		<div id="hook" class="options" style="margin-top:250px;cursor: progress;" onclick="window.alert('Under construction')">Automated ML
 			<div class="arrow"></div>
 		</div>
-		<div id="hook1" class="options" style="margin-top:10px" onclick="stack()">Stocker
+		<div id="hook1" class="options" style="margin-top:10px" onclick="window.alert('Under construction')">Stocker
 			<div class="arrow"></div>
 		</div>
 		<div id="hook2" class="options" style="margin-top:10px;cursor: copy;" onclick="git_navigate()" >GIT Repo
@@ -145,7 +150,22 @@ function git_navigate() {
 			<div class="arrow"></div>
 		</div>
 		<div class="binder"></div>
-		<div id="about"></div>
+		<div id="about">
+			<img src="/static/profile.jpg">
+			<p style="margin-top:-290px">
+				Myself SHREYAS POBBI,
+				I am passionate about structuring & syntheses <br>
+				and I am currently experimenting with data visualization,
+				python, freelancing <br>and kotlin.(Mostly in Storage domain)
+				<br><br>
+				“The development of full artificial intelligence could spell the end of the human race….<br>
+				It would take off on its own, and re-design itself at an ever increasing rate.<br>
+				Humans, who are limited by slow biological evolution, couldn't compete,<br> and would be superseded.”<br>
+				— Stephen Hawking
+			</p>
+			<img src="/static/email.svg" style="height: 20px;width: 20px;margin-left:0px">shreyas.pobbi@gmail.com<br>
+			<img src="/static/hangouts.svg" style="height: 20px;width: 20px;margin-left:0px">+91-9481459154
+		</div>
 	</div>
 </body>
 </html>
